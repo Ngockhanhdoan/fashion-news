@@ -1,0 +1,78 @@
+// src/app/globals.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --fashion-black: #0a0a0a;
+  --fashion-white: #fafafa;
+  --fashion-gold: #c9a84c;
+  --fashion-cream: #f5f0e8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--fashion-black);
+  color: var(--fashion-white);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9a84c;
+  border-radius: 3px;
+}
+
+/* Reader mode typography */
+.reader-content {
+  font-family: Georgia, Cambria, 'Times New Roman', serif;
+  line-height: 1.9;
+  font-size: 1.1rem;
+  color: #e8e4dc;
+}
+
+.reader-content p { margin-bottom: 1.25rem; }
+.reader-content h1,
+.reader-content h2,
+.reader-content h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #fafafa;
+  margin: 2rem 0 0.75rem;
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+/* Gold accent line */
+.gold-line {
+  background: linear-gradient(90deg, #c9a84c, #e8c97a, #c9a84c);
+}
